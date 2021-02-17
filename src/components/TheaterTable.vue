@@ -46,7 +46,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import { dateMixin, priceRangeMixin } from "../mixins/TableMixins";
+import { dateMixin, priceRangeMixin } from "../mixins/tableMixins";
 
 export default {
   mixins: [dateMixin, priceRangeMixin],

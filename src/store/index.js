@@ -14,7 +14,7 @@ export default new Vuex.Store({
     endDate: null,
     concerts: {},
     sporting: {},
-    theater: {},
+    theater: {}
   },
   mutations: {
     setDateSelected(state, payload) {
@@ -29,7 +29,7 @@ export default new Vuex.Store({
     },
     setTheaterEvents(state, payload) {
       state.theater = payload;
-    },
+    }
   },
   actions: {
     async getEventsForDateRange({ commit, dispatch }, range) {
@@ -58,7 +58,7 @@ export default new Vuex.Store({
       const res = await fetch(url);
       const data = await res.json();
       commit("setTheaterEvents", data);
-    },
+    }
   },
 
   getters: {
@@ -84,8 +84,8 @@ export default new Vuex.Store({
       }
 
       return state.theater.events.slice(0, 3);
-    },
+    }
   },
 
-  modules: {},
+  modules: {}
 });

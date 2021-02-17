@@ -4,8 +4,8 @@ export const dateMixin = {
   methods: {
     formatDate(dateString) {
       return format(new Date(dateString), "MMM dd");
-    },
-  },
+    }
+  }
 };
 
 export const priceRangeMixin = {
@@ -15,6 +15,6 @@ export const priceRangeMixin = {
         return "Unknown";
       }
       return `$${min} - $${max}`;
-    },
-  },
+    }
+  }
 };

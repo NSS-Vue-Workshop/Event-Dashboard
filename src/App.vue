@@ -1,28 +1,65 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-app id="app">
+    <v-main>
+      <v-container class="pt-12">
+        <app-header class="mb-5"></app-header>
+        <v-row>
+          <v-col sm="12" lg="6" xl="5">
+            <v-row class="mb-6">
+              <v-col>
+                <sports-count-card></sports-count-card>
+              </v-col>
+              <v-col>
+                <theater-count-card></theater-count-card>
+              </v-col>
+              <v-col>
+                <concerts-count-card></concerts-count-card>
+              </v-col>
+            </v-row>
+            <date-picker class="mb-5"></date-picker>
+          </v-col>
+          <v-col sm="12" lg="6" xl="7">
+            <sports-table class="mb-6"></sports-table>
+            <theater-table class="mb-6"></theater-table>
+            <concert-table class="mb-6"></concert-table>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import DatePicker from "./components/DatePicker.vue";
+import AppHeader from "./components/AppHeader.vue";
+import SportsCountCard from "./components/SportsCountCard.vue";
+import TheaterCountCard from "./components/TheaterCountCard.vue";
+import ConcertsCountCard from "./components/ConcertsCountCard.vue";
+import SportsTable from "./components/SportsTable.vue";
+import TheaterTable from "./components/TheaterTable.vue";
+import ConcertTable from "./components/ConcertTable.vue";
 export default {
   name: "App",
+
   components: {
-    HelloWorld
-  }
+    DatePicker,
+    AppHeader,
+    SportsCountCard,
+    TheaterCountCard,
+    ConcertsCountCard,
+    SportsTable,
+    TheaterTable,
+    ConcertTable
+  },
+
+  data: () => ({
+    //
+  })
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: #f0f0f0 !important;
 }
 </style>
